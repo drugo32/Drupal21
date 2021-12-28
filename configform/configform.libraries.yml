@@ -1,0 +1,11 @@
+slide-js:
+  css:
+    component:
+      slide/splide-default.min.css : {}
+      slide/splide-sea-green.min.css : {}
+      slide/splide-skyblue.min.css : {}
+  js:
+    slide/test.js: {}
+    slide/splide.cjs.min.js: {}
+  dependencies:
+    - core/jquery

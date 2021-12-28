@@ -1,0 +1,36 @@
+# These routes are tells Drupal where to find the content/actions for each URL.
+
+# pagina del form per salvare i dati.
+config_form.client_settings:
+  path: '/configform/client-settings'
+  defaults:
+    _title: 'My Drupal site FormTest'
+    _form: '\Drupal\configform\Form\MyConfigForm'
+  requirements:
+    _permission: 'access content'
+
+# pagina con template twig description.html.twig
+config_form.description:
+  path: '/configform/page-example'
+  defaults:
+    _controller: '\Drupal\configform\Controller\ConfigFormController::description'
+    _title: 'Page Example'
+  requirements:
+    _permission: 'access content'
+
+# pagina di riepilogo dei dati salvati
+config_form.settingsdisplay:
+  path: '/configform/page-settings'
+  defaults:
+    _controller: '\Drupal\configform\Controller\ConfigFormController::simple'
+    _title: 'Page Example'
+  requirements:
+    _permission: 'access content'
+
+
+configform.arguments:
+  path: '/configform/page-example/arguments/{first}/{second}'
+  defaults:
+    _controller: '\Drupal\configform\Controller\ConfigFormController::arguments'
+  requirements:
+    _permission: 'access arguments page'

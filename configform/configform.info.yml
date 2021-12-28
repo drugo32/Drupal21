@@ -1,0 +1,5 @@
+name: 'config custom form'
+description: 'form test strutture e viste'
+type: module
+core_version_requirement: '^8.9 || ^9'
+version: 9.x.1.0
