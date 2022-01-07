@@ -1,0 +1,13 @@
+<?php
+/**
+ * @file
+ * Contains \Drupal\mymodule\Plugin\RulesAction\MyAction.
+ */
+namespace Drupal\test\Plugin\RulesAction;
+use Drupal\rules\Core\RulesActionBase;
+
+
+function test_template_preprocess_node(&$variables) {
+  dpm(array_keys($variables));
+  //$node = $variables['content'];
+}

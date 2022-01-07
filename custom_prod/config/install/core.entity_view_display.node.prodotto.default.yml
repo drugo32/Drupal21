@@ -1,0 +1,30 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - field.field.node.prodotto.body
+    - field.field.node.prodotto.field_scheda
+    - node.type.prodotto
+  module:
+    - text
+    - user
+id: node.prodotto.default
+targetEntityType: node
+bundle: prodotto
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_scheda: true
+  langcode: true

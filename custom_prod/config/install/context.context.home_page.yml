@@ -1,0 +1,93 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.content_recent
+    - views.view.file_scheda_prodotto
+  module:
+    - system
+    - test
+    - user
+    - views
+label: 'home page'
+name: home_page
+group: Home
+description: 'home page'
+requireAllConditions: true
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 8fef3b7f-bba8-4fb9-9e5c-9afbe23a5bdf
+    context_mapping: {  }
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    uuid: 9963a310-5f12-4857-9806-bce837f4c68e
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+reactions:
+  blocks:
+    id: blocks
+    uuid: 68eddd4d-26ff-4038-9d91-54bf61797dbe
+    blocks:
+      0b1aca6e-e44a-4eb8-b2fd-33a86fd8191e:
+        uuid: 0b1aca6e-e44a-4eb8-b2fd-33a86fd8191e
+        id: 'views_block:content_recent-block_1'
+        label: ''
+        provider: views
+        label_display: visible
+        region: content
+        weight: '0'
+        custom_id: views_block_content_recent_block_1
+        theme: bartik
+        css_class: ''
+        unique: 0
+        context_id: home_page
+        context_mapping: {  }
+        views_label: ''
+        items_per_page: none
+        third_party_settings: {  }
+      c8b25ab8-2641-41e9-ae90-74d762c6b225:
+        uuid: c8b25ab8-2641-41e9-ae90-74d762c6b225
+        id: 'views_exposed_filter_block:file_scheda_prodotto-page_1'
+        label: ''
+        provider: views
+        label_display: visible
+        region: content
+        weight: '1'
+        custom_id: views_exposed_filter_block_file_scheda_prodotto_page_1
+        theme: d9
+        css_class: ''
+        unique: 0
+        context_id: home_page
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+      8ece0d05-8f98-4834-a362-8ef56c63bf11:
+        uuid: 8ece0d05-8f98-4834-a362-8ef56c63bf11
+        id: tracker_block
+        label: 'BTR tracking'
+        provider: test
+        label_display: visible
+        region: content
+        weight: '0'
+        custom_id: tracker_block
+        theme: d9
+        css_class: ''
+        unique: 0
+        context_id: home_page
+        context_mapping: {  }
+        hello_block_name: ''
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+  body_class:
+    id: body_class
+    body_class: home-login
+    saved: false
+weight: 0

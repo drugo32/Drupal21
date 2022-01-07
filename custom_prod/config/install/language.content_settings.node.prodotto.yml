@@ -1,0 +1,10 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - node.type.prodotto
+id: node.prodotto
+target_entity_type_id: node
+target_bundle: prodotto
+default_langcode: site_default
+language_alterable: false

@@ -47,8 +47,10 @@ class ConfigFormController extends ControllerBase {
 
      $v = views_embed_view('node_slide','block_1', $this->config('configform.settings')->get('server_url'));
      //dpm(render($v));
+     $attachments['#attached']['drupalSettings']['myvar'] = $myVariable;
     return [
       '#attached' => [
+        'drupalSettings' => ['myvar' => 'php_vars'],
         'library' => 'configform/slide-js'
       ],
       '#markup' => render($v) . '<div class="splide">

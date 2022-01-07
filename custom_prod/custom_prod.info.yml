@@ -1,0 +1,22 @@
+name: 'Custom Prod'
+description: 'strutture e viste'
+type: module
+core_version_requirement: '^8.9 || ^9'
+version: 9.x.1.0
+dependencies:
+  - 'context:context'
+  - 'drupal:field'
+  - 'drupal:file'
+  - 'drupal:image'
+  - 'drupal:language'
+  - 'drupal:menu_ui'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:rest'
+  - 'drupal:serialization'
+  - 'drupal:system'
+  - 'drupal:text'
+  - 'drupal:user'
+  - 'drupal:views'
+  - 'inline_entity_form:inline_entity_form'
+  - 'test:test'

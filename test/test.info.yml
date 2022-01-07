@@ -1,0 +1,18 @@
+name: Test
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - 'drupal:comment'
+  - 'drupal:contextual'
+  - 'drupal:field'
+  - 'drupal:file'
+  - 'drupal:image'
+  - 'drupal:node'
+  - 'drupal:path'
+  - 'drupal:rdf'
+  - 'drupal:system'
+  - 'drupal:taxonomy'
+  - 'drupal:text'
+  - 'drupal:toolbar'
+  - 'drupal:tour'
+  - 'drupal:user'

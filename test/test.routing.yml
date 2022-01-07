@@ -1,0 +1,10 @@
+# This route is for an AJAX callback. It is used by the AJAX system on
+# ajax_example.ajax_link_render. It has a {nojs} parameter, which gives us
+# a way to know whether the request is an AJAX request or is from some other
+# source.
+test.ajax_link_callback:
+  path: '/test/ajax-link-callback/{nojs}'
+  defaults:
+    _controller: '\Drupal\test\Controller\TestController::ajaxLinkCallback'
+  requirements:
+    _permission: 'access content'

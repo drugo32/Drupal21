@@ -1,0 +1,36 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.scheda.body
+    - field.field.node.scheda.field_file
+    - node.type.scheda
+  module:
+    - file
+    - user
+id: node.scheda.teaser
+targetEntityType: node
+bundle: scheda
+mode: teaser
+content:
+  field_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  langcode:
+    type: language
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  links: true

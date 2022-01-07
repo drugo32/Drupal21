@@ -1,4 +1,16 @@
 # These routes are tells Drupal where to find the content/actions for each URL.
+# pagina di riepilogo dei dati salvati
+config_form.views_node_tab:
+  path: '/custom_views/{display}'
+  defaults:
+    _controller: '\Drupal\configform\Controller\CustomController::CustomViews'
+    _title: 'Page Example'
+    display: ''
+  requirements:
+    _permission: 'access content'
+
+
+
 
 # pagina del form per salvare i dati.
 config_form.client_settings:

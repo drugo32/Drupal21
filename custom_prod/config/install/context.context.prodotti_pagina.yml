@@ -1,0 +1,45 @@
+langcode: it
+status: true
+dependencies:
+  config:
+    - views.view.file_scheda_prodotto
+  module:
+    - system
+    - views
+label: 'prodotti pagina'
+name: prodotti_pagina
+group: Pagina
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    uuid: 50133d66-a041-4182-beb8-b004b020de7b
+    context_mapping: {  }
+    pages: '/prodotto/*'
+reactions:
+  blocks:
+    id: blocks
+    uuid: eab943a4-5069-412d-999c-1781fc46af20
+    blocks:
+      d688fe92-2ff9-41cd-bcca-7db1b66647c8:
+        uuid: d688fe92-2ff9-41cd-bcca-7db1b66647c8
+        id: 'views_exposed_filter_block:file_scheda_prodotto-page_1'
+        label: ''
+        provider: views
+        label_display: visible
+        region: sidebar_second
+        weight: '0'
+        custom_id: views_exposed_filter_block_file_scheda_prodotto_page_1
+        theme: d9
+        css_class: ''
+        unique: 0
+        context_id: prodotti_pagina
+        context_mapping: {  }
+        views_label: ''
+        third_party_settings: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0

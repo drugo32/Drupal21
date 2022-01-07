@@ -1,0 +1,32 @@
+langcode: it
+status: true
+dependencies:
+  module:
+    - node
+label: prodotto
+name: prodotto
+group: node
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8bab5e4a-b9c6-4136-aec0-0eb336ea0f84
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      prodotto: prodotto
+reactions:
+  body_class:
+    id: body_class
+    body_class: node-prodotto-context
+    saved: false
+  blocks:
+    id: blocks
+    uuid: f83f48b3-262d-43e2-a78b-a879cafa3000
+    blocks: {  }
+    include_default_blocks: 0
+    saved: false
+weight: 0
